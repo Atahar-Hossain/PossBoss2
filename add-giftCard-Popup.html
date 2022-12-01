@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="POS Admin Template">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favi.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Line-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+    <!-- default CSS -->
+    <link rel="stylesheet" href="assets/css/default.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>POS Management</title>
+</head>
+
+<body>
+    <div class="master-popup">
+        <div class="container">
+            <div class="addCustomer">
+                <button>
+                    <i class="fas fa-plus-circle"></i> Add Sales Products </button>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label>
+                                        <strong>Warehouse</strong>
+                                    </label>
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option selected>Warehouse-1</option>
+                                        <option value="1">Warehouse-2</option>
+                                        <option value="2">Warehouse-3</option>
+                                        <option value="3">Warehouse-4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label>
+                                        <strong>Reference No</strong>
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="Reference Number">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label>
+                                        <strong>Sales Product Add</strong>
+                                    </label>
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option selected>Product Name/Search-1</option>
+                                        <option value="1">Product Name/Search-2</option>
+                                        <option value="2">Product Name/Search-3</option>
+                                        <option value="3">Product Name/Search-4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label>
+                                        <strong>Product/SKU</strong>
+                                    </label>
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option selected>Product Item-1</option>
+                                        <option value="1">Product Item-2</option>
+                                        <option value="2">Product Item-3</option>
+                                        <option value="3">Product Item-4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label>
+                                        <strong>Category</strong>
+                                    </label>
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option selected>Category-1</option>
+                                        <option value="1">Category-2</option>
+                                        <option value="2">Category-3</option>
+                                        <option value="3">Category-4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label>
+                                        <strong>Sub Category</strong>
+                                    </label>
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option selected>Sub Category-1</option>
+                                        <option value="1">Sub Category-2</option>
+                                        <option value="2">Sub Category-3</option>
+                                        <option value="3">Sub Category-4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="product-count" id="product-count-sec" style="margin-top: 4px;">
+                                    <div class="form-group">
+                                        <div class="input-group count-group">
+                                            <label class="count-sec">Product Price</label>
+                                            <input type="text" class="form-control" placeholder="Price" aria-label="text">
+                                            <span class="input-group-text">Tk</span>
+                                        </div>
+                                        <div class="input-group count-group ">
+                                            <label class="count-sec">Quantity</label>
+                                            <div class="quantity add_sales_quantity">
+                                                <a href="#" class="sale_quantity__minus">
+                                                    <span>
+                                                        <i class="fa fa-minus" aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                                <input name="quantity" type="text" class="sale_quantity__input" value="1">
+                                                <a href="#" class="sale_quantity__plus">
+                                                    <span>
+                                                        <i class="fa fa-plus" aria-hidden="true"></i>
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label>
+                                        <strong>Reference No</strong>
+                                    </label>
+                                    <input type="text" class="form-control" placeholder="Reference Number">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label>
+                                        <strong>Group</strong>
+                                    </label>
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option selected>Group Type-1</option>
+                                        <option value="1">Group Type-2</option>
+                                        <option value="2">Group Type-3</option>
+                                        <option value="3">Group Type-4</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                <div class="form-group">
+                                    <label>
+                                        <strong>Address</strong>
+                                    </label>
+                                    <select class="form-select form-control" aria-label="Default select example">
+                                        <option selected>Address-1</option>
+                                        <option value="1">Address-2</option>
+                                        <option value="2">Address-3</option>
+                                        <option value="3">Address-4</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center mt-3">
+                            <div class="col-xl-6">
+                                <div class="customer-add-button">
+                                    <input type="submit" value="Save">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- font awesome -->
+    <script src="assets/js/kit.fontawesome.js"></script>
+    <!-- Slimscroll JS -->
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/app.js"></script>
+    <!-- Quantity Scripts -->
+    <script src="assets/js/quantity-2.js"></script>
+    <script src="assets/js/quantity-3.js"></script>
+</body>
+
+</html>

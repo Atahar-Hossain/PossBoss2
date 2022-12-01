@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="POS Admin Template">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favi.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Line-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+    <!-- default CSS -->
+    <link rel="stylesheet" href="assets/css/default.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>POS Management</title>
+</head>
+
+<body>
+    <!-- Main Wrapper -->
+    <div class="main-wrapper" id="adding-cate">
+        <!-- Header -->
+        <div class="header header-sticky">
+            <!-- Logo -->
+            <div class="header-left">
+                <a id="toggle_btn" class="d-md-none d-block" href="javascript:void(0);">
+                    <span class="bar-icon">
+              <span></span>
+                    <span></span>
+                    <span></span>
+                    </span>
+                </a>
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.jpg" alt="">
+                </a>
+            </div>
+            <!-- /Logo -->
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar">
+                <i class="fa fa-bars"></i>
+            </a>
+            <!-- Header Menu -->
+            <ul class="nav user-menu">
+                <li title="POS Management" class="nav-item dropdown ">
+                    <div class="pos-border">
+                        <a href="pos-manage.html">
+                            <i class="fas fa-cash-register"></i>
+                            <span>POS</span>
+                        </a>
+                    </div>
+                </li>
+                <li title="Cash Register" class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </a>
+                </li>
+                <li title="Currency" class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="fas fa-dollar-sign"></i>
+                    </a>
+                </li>
+                <!-- Flag -->
+                <li title="Language" class="nav-item dropdown has-arrow flag-nav">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+                        <img src="assets/img/us.png" alt="" height="20">
+                        <span>English</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="assets/img/us.png" alt="" height="16"> English </a>
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="assets/img/fr.png" alt="" height="16"> French </a>
+                    </div>
+                </li>
+                <!-- /Flag -->
+                <li title="Current Date" class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <span>12/12/2021</span>
+                    </a>
+                </li>
+                <li title="Notification" class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                    </a>
+                </li>
+                <!-- /Message Notifications -->
+                <li class="nav-item dropdown has-arrow main-drop" id="admin-login-dashbord">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <span class="user-img">
+                <img src="assets/img/admin.png" alt="">
+              </span>
+                        <span class="status online"></span>
+                        <span>Admin</span>
+                    </a>
+                    <div class="dropdown-menu" style="padding: 8px 2px;">
+                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- /Header Menu -->
+            <!-- Mobile Menu -->
+            <div class="dropdown mobile-user-menu">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-user"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">My Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+            <!-- /Mobile Menu -->
+        </div>
+        <!-- /Header -->
+
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="fas fa-luggage-cart"></i>
+                                <span> Sales & Purchase</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Sales </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="addSales.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Add Sale </a>
+                                        </li>
+                                        <li>
+                                            <a href="salesReturn.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Return List </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Discount </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="add-discount.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Add Discount </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Gift Card </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="add-giftcardListView.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Gift Card List </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Coupon Card </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="addCoupon.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Coupon List </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Draft </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="add-SalesDraft.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Draft List </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Purchase </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="PurchaseProductList.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase List </a>
+                                        </li>
+                                        <li>
+                                            <a href="purchase-approveList.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase Approve </a>
+                                        </li>
+                                        <li>
+                                            <a href="purchasProduct.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase Add </a>
+                                        </li>
+                                        <li>
+                                            <a href="add-purchaseTax.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase TAX Add </a>
+                                        </li>
+                                        <li>
+                                            <a href="add-purchaseStatus.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase Status Add </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase Payment Due </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span> Product Information</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="addProduct.html">
+                                        <i class="fad fa-angle-right"></i> Add Product </a>
+                                </li>
+                                <li>
+                                    <a href="productList.html">
+                                        <i class="fad fa-angle-right"></i> Product List </a>
+                                </li>
+                                <li>
+                                    <a href="add-categories.html">
+                                        <i class="fad fa-angle-right"></i> Category </a>
+                                </li>
+                                <li>
+                                    <a href="add-unit.html">
+                                        <i class="fad fa-angle-right"></i> Unit </a>
+                                </li>
+                                <li>
+                                    <a href="add-incomeTax.html">
+                                        <i class="fad fa-angle-right"></i> Add Income Tax </a>
+                                </li>
+                                <li>
+                                    <a href="add-vat.html">
+                                        <i class="fad fa-angle-right"></i> Add Vat </a>
+                                </li>
+                                <li>
+                                    <a href="add-sellingTax.html">
+                                        <i class="fad fa-angle-right"></i> TAX </a>
+                                </li>
+                                <li>
+                                    <a href="add-brand.html">
+                                        <i class="fad fa-angle-right"></i> Brand </a>
+                                </li>
+                                <li>
+                                    <a href="add-supplier.html">
+                                        <i class="fad fa-angle-right"></i> Add Supplier </a>
+                                </li>
+                                <li>
+                                    <a href="add-warehouse.html">
+                                        <i class="fad fa-angle-right"></i> Add Warehouse </a>
+                                </li>
+                                <li>
+                                    <a href="add-sellingTax.html">
+                                        <i class="fad fa-angle-right"></i> Add Selling TAX </a>
+                                </li>
+                                <li>
+                                    <a href="add-businessLocation.html">
+                                        <i class="fad fa-angle-right"></i> Business Location </a>
+                                </li>
+                                <li>
+                                    <a href="add-warrenties.html">
+                                        <i class="fad fa-angle-right"></i> Warrenties </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Stock </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="stockReportList.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Total Stock </a>
+                                        </li>
+                                        <li>
+                                            <a href="stockReportList.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Stock Sell Value </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="far fa-credit-card"></i>
+                                <span> Expences & Payments</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="add-bankName.html">
+                                        <i class="fad fa-angle-right"></i> Add Bank </a>
+                                </li>
+                                <li>
+                                    <a href="add-branch.html">
+                                        <i class="fad fa-angle-right"></i> Add Branch </a>
+                                </li>
+                                <li>
+                                    <a href="add-accountType.html">
+                                        <i class="fad fa-angle-right"></i> Account Type </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span> Accounting</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="accountingList.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Accounting List </a>
+                                        </li>
+                                        <li>
+                                            <a href="add-accountType.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Add Account </a>
+                                        </li>
+                                        <li>
+                                            <a href="moneyTransfer.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Money Transfer </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span> Expenses</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="expenseAdd.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Add Expenses </a>
+                                        </li>
+                                        <li>
+                                            <a href="expenseList.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Expenses List </a>
+                                        </li>
+                                        <li>
+                                            <a href="add-expenseCategory.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Expenses Category </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span> Payments</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="add-payment-method.html">
+                                                <i class="fad fa-angle-right"></i> Add Payment Method </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="fas fa-network-wired"></i>
+                                <span> HRM</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> Add Staff User </a>
+                                </li>
+                                <li>
+                                    <a href="#">Staff User List</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="fas fa-clipboard"></i>
+                                <span> Reports</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> Reports </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="far fa-cog"></i>
+                                <span> Settings & Customize</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> User Profile </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> Company Details </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> General Setting </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="business.html">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span> Backup</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="toggle-sidebar-button js-toggle-sidebar qa-toggle-sidebar rspec-toggle-sidebar" role="button" title="Toggle sidebar">
+                        <span class="collapse-text gl-ml-3">Collapse</span>
+                        <i class="fad fa-chevron-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /Sidebar -->
+        <!-- Page Wrapper -->
+        <div class="page-wrapper">
+            <!-- Page Content -->
+            <div class="content container-fluid">
+                <!-- Page Header -->
+                <div class="page-header">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="page-title">Bank <span>add</span>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Page Header -->
+                <div class="row adding-category-sec">
+                    <div class="col-lg-12 col-md-12 single-page-body">
+                        <div class="addCustomer">
+                            <button>
+                  <i class="fas fa-plus-circle"></i> Add Bank </button>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-6" style="width: 100%;">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <label for="adding-name-field">Bank Name <input type="text" class="adding-name-field form-control" id="adding-name-field" placeholder="Enter Bank Name">
+                      </label>
+                                        <button type="submit" class="adding-save-btn">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- list start -->
+                <section class="category-lists">
+                    <div class="container">
+                        <div class="page-list-title">
+                            <h4 style="font-size: 22px; font-weight: 500;">List</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10 offset-md-1">
+                                <div class="row justify-content-between list-padding align-items-center">
+                                    <div class="col-xl-4 col-lg-2 col-md-2 col-sm-6 col-6">
+                                        <div class="list-show">
+                                            <span>show : </span>
+                                            <select class="form-select" aria-label="Default select example">
+                          <option value="0" selected>1</option>
+                          <option value="1">2</option>
+                          <option value="2">3</option>
+                          <option value="3">4</option>
+                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                        <div class="list-show-search">
+                                            <input type="search" placeholder="Search Here.....">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-12">
+                                                <div class="admin-filter">
+                                                    <div class="admin-panel-filter filter-button-icon">
+                                                        <span>
+                                <img src="assets/img/filter-square-fill.svg" alt="">
+                              </span>
+                                                        <form action="#">
+                                                            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                  <option selected>Filter</option>
+                                  <option value="1">Yesterday</option>
+                                  <option value="2">Today</option>
+                                  <option value="3">Last 7 Days</option>
+                                  <option value="3">Last 30 Days</option>
+                                  <option value="3">This Month</option>
+                                  <option value="3">Last Month</option>
+                                  <option value="3">This month last year</option>
+                                  <option value="3">This Year</option>
+                                  <option value="3">Last Year</option>
+                                  <option value="3">Current financial year</option>
+                                  <option value="3">Last financial year</option>
+                                  <option value="3">Custom Range</option>
+                                </select>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <table class="table table-bordered" style="overflow-x: scroll;">
+                                            <thead>
+                                                <tr>
+                                                    <th style="width: 15%;">
+                                                        <input type="checkbox"> SL
+                                                    </th>
+                                                    <th style="width: 75%;"> Banks</th>
+                                                    <th style="width: 10%;">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox"> 1
+                                                    </td>
+                                                    <td>Demo</td>
+                                                    <td style="text-align: center;">
+                                                        <a href="#">
+                                                            <i class="fa fa-edit"></i>
+                                                        </a>
+                                                        <a href="#" style="color: red;">
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox"> 2
+                                                    </td>
+                                                    <td>Demo</td>
+                                                    <td style="text-align: center;">
+                                                        <a href="#">
+                                                            <i class="fa fa-edit"></i>
+                                                        </a>
+                                                        <a href="#" style="color: red;">
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox"> 3
+                                                    </td>
+                                                    <td>Demo</td>
+                                                    <td style="text-align: center;">
+                                                        <a href="#">
+                                                            <i class="fa fa-edit"></i>
+                                                        </a>
+                                                        <a href="#" style="color: red;">
+                                                            <i class="fa fa-trash"></i>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-end">
+                                    <div class="col-xl-12">
+                                        <div class="pagination-add-category">
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination">
+                                                    <li class="page-item">
+                                                        <a class="page-link pagination-bg" href="#">
+                                                            <i class="fas fa-angle-left" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link pagination-count" href="#">1</a>
+                                                    </li>
+                                                    <li class="page-item">
+                                                        <a class="page-link pagination-bg" id="pagination-right-icon" href="#">
+                                                            <i class="fas fa-angle-right" aria-hidden="true"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- list end -->
+            </div>
+            <!-- /Page Content -->
+        </div>
+        <!-- /Page Wrapper -->
+    </div>
+    <!-- /Main Wrapper -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- font awesome -->
+    <script src="assets/js/kit.fontawesome.js"></script>
+    <!-- Slimscroll JS -->
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/app.js"></script>
+    <!-- Quantity Scripts -->
+    <script src="assets/js/quantity-2.js"></script>
+    <script src="assets/js/quantity-3.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="POS Admin Template">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favi.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Font-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Line-awesome CSS -->
+    <link rel="stylesheet" href="assets/css/line-awesome.min.css">
+    <!-- default CSS -->
+    <link rel="stylesheet" href="assets/css/default.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>POS Management</title>
+</head>
+
+<body>
+    <!-- Main Wrapper -->
+    <div class="main-wrapper">
+        <!-- Header -->
+        <div class="header header-sticky">
+            <!-- Logo -->
+            <div class="header-left">
+                <a id="toggle_btn" class="d-md-none d-block" href="javascript:void(0);">
+                    <span class="bar-icon">
+              <span></span>
+                    <span></span>
+                    <span></span>
+                    </span>
+                </a>
+                <a href="index.html" class="logo">
+                    <img src="assets/img/logo.jpg" alt="">
+                </a>
+            </div>
+            <!-- /Logo -->
+            <a id="mobile_btn" class="mobile_btn" href="#sidebar">
+                <i class="fa fa-bars"></i>
+            </a>
+            <!-- Header Menu -->
+            <ul class="nav user-menu">
+                <li title="POS Management" class="nav-item dropdown ">
+                    <div class="pos-border">
+                        <a href="pos-manage.html">
+                            <i class="fas fa-cash-register"></i>
+                            <span>POS</span>
+                        </a>
+                    </div>
+                </li>
+                <li title="Cash Register" class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </a>
+                </li>
+                <li title="Currency" class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="fas fa-dollar-sign"></i>
+                    </a>
+                </li>
+                <!-- Flag -->
+                <li title="Language" class="nav-item dropdown has-arrow flag-nav">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button">
+                        <img src="assets/img/us.png" alt="" height="20">
+                        <span>English</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="assets/img/us.png" alt="" height="16"> English </a>
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="assets/img/fr.png" alt="" height="16"> French </a>
+                    </div>
+                </li>
+                <!-- /Flag -->
+                <li title="Current Date" class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <span>12/12/2021</span>
+                    </a>
+                </li>
+                <li title="Notification" class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                    </a>
+                </li>
+                <!-- /Message Notifications -->
+                <li class="nav-item dropdown has-arrow main-drop" id="admin-login-dashbord">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                        <span class="user-img">
+                <img src="assets/img/admin.png" alt="">
+              </span>
+                        <span class="status online"></span>
+                        <span>Admin</span>
+                    </a>
+                    <div class="dropdown-menu" style="padding: 8px 2px;">
+                        <a class="dropdown-item" href="#">My Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- /Header Menu -->
+            <!-- Mobile Menu -->
+            <div class="dropdown mobile-user-menu">
+                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-user"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="#">My Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Logout</a>
+                </div>
+            </div>
+            <!-- /Mobile Menu -->
+        </div>
+        <!-- /Header -->
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="fas fa-luggage-cart"></i>
+                                <span> Sales & Purchase</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Sales </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="addSales.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Add Sale </a>
+                                        </li>
+                                        <li>
+                                            <a href="salesReturn.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Return List </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Discount </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="add-discount.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Add Discount </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Gift Card </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="add-giftcardListView.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Gift Card List </a>
+                                        </li>
+                                        <!-- <li><a href="#"><i class="fas fa-circle sidebar-icon-box"></i> Add Gift Card</a></li> -->
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Coupon Card </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="addCoupon.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Coupon List </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Draft </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="add-SalesDraft.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Draft List </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Purchase </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="PurchaseProductList.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase List </a>
+                                        </li>
+                                        <li>
+                                            <a href="purchase-approveList.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase Approve </a>
+                                        </li>
+                                        <li>
+                                            <a href="purchasProduct.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase Add </a>
+                                        </li>
+                                        <li>
+                                            <a href="add-purchaseTax.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase TAX Add </a>
+                                        </li>
+                                        <li>
+                                            <a href="add-purchaseStatus.html">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase Status Add </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="far fa-circle sidebar-icon-box"></i> Purchase Payment Due </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span> Product Information</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="addProduct.html">
+                                        <i class="fad fa-angle-right"></i> Add Product </a>
+                                </li>
+                                <li>
+                                    <a href="productList.html">
+                                        <i class="fad fa-angle-right"></i> Product List </a>
+                                </li>
+                                <li>
+                                    <a href="add-categories.html">
+                                        <i class="fad fa-angle-right"></i> Category </a>
+                                </li>
+                                <li>
+                                    <a href="add-unit.html">
+                                        <i class="fad fa-angle-right"></i> Unit </a>
+                                </li>
+                                <li>
+                                    <a href="add-incomeTax.html">
+                                        <i class="fad fa-angle-right"></i> Add Income Tax </a>
+                                </li>
+                                <li>
+                                    <a href="add-vat.html">
+                                        <i class="fad fa-angle-right"></i> Add Vat </a>
+                                </li>
+                                <li>
+                                    <a href="add-sellingTax.html">
+                                        <i class="fad fa-angle-right"></i> TAX </a>
+                                </li>
+                                <li>
+                                    <a href="add-brand.html">
+                                        <i class="fad fa-angle-right"></i> Brand </a>
+                                </li>
+                                <li>
+                                    <a href="add-supplier.html">
+                                        <i class="fad fa-angle-right"></i> Add Supplier </a>
+                                </li>
+                                <li>
+                                    <a href="add-warehouse.html">
+                                        <i class="fad fa-angle-right"></i> Add Warehouse </a>
+                                </li>
+                                <li>
+                                    <a href="add-sellingTax.html">
+                                        <i class="fad fa-angle-right"></i> Add Selling TAX </a>
+                                </li>
+                                <li>
+                                    <a href="add-businessLocation.html">
+                                        <i class="fad fa-angle-right"></i> Business Location </a>
+                                </li>
+                                <li>
+                                    <a href="add-warrenties.html">
+                                        <i class="fad fa-angle-right"></i> Warrenties </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span>
+                        <i class="fad fa-angle-right sidebar-icon-box"></i> Stock </span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="stockReportList.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Total Stock </a>
+                                        </li>
+                                        <li>
+                                            <a href="stockReportList.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Stock Sell Value </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="far fa-credit-card"></i>
+                                <span> Expences & Payments</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="add-bankName.html">
+                                        <i class="fad fa-angle-right"></i> Add Bank </a>
+                                </li>
+                                <li>
+                                    <a href="add-branch.html">
+                                        <i class="fad fa-angle-right"></i> Add Branch </a>
+                                </li>
+                                <li>
+                                    <a href="add-accountType.html">
+                                        <i class="fad fa-angle-right"></i> Account Type </a>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span> Accounting</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="accountingList.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Accounting List </a>
+                                        </li>
+                                        <li>
+                                            <a href="add-accountType.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Add Account </a>
+                                        </li>
+                                        <li>
+                                            <a href="moneyTransfer.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Money Transfer </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span> Expences</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="expenseAdd.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Add Expences </a>
+                                        </li>
+                                        <li>
+                                            <a href="expenseList.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Expences List </a>
+                                        </li>
+                                        <li>
+                                            <a href="add-expenseCategory.html">
+                                                <i class="fas fa-circle sidebar-icon-box"></i> Expenses Category </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="submenu">
+                                    <a href="#">
+                                        <span> Payments</span>
+                                        <span class="menu-arrow"></span>
+                                    </a>
+                                    <ul style="display: none;">
+                                        <li>
+                                            <a href="add-payment-method.html">
+                                                <i class="fad fa-angle-right"></i> Add Payment Method </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="fas fa-network-wired"></i>
+                                <span> HRM</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> Add Staff User </a>
+                                </li>
+                                <li>
+                                    <a href="#">Staff User List</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="fas fa-clipboard"></i>
+                                <span> Reports</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> Reports </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#">
+                                <i class="far fa-cog"></i>
+                                <span> Settings & Customize</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul style="display: none;">
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> User Profile </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> Company Details </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fad fa-angle-right"></i> General Setting </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="business.html">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span> Backup</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="toggle-sidebar-button js-toggle-sidebar qa-toggle-sidebar rspec-toggle-sidebar" role="button" title="Toggle sidebar">
+                        <span class="collapse-text gl-ml-3">Collapse</span>
+                        <i class="fad fa-chevron-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- /Sidebar -->
+        <!-- Page Wrapper -->
+        <div class="page-wrapper">
+            <!-- Page Content -->
+            <div class="content container-fluid">
+                <!-- Page Header -->
+                <div class="page-header pos-manage">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <h3 class="page-title">Pos Manage</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="pos-manage-section">
+                    <div class="row no-gutters">
+                        <div class="col-xl-7 col-lg-7 col-md-7">
+                            <div class="pos-manage-left pos-manage-border">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label>
+                            <strong>Customer</strong>
+                          </label>
+                                                <div class="input-form">
+                                                    <select class="form-select form-control" id="pos-manageInputfield" aria-label="Default select example">
+                              <option selected>Work in Customer</option>
+                              <option value="1">Work in Customer</option>
+                              <option value="2">Work in Customer</option>
+                              <option value="3">Work in Customer</option>
+                            </select>
+                                                    <i class="fa fa-plus-circle" id="pos-manage-plusIco1"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label>
+                            <strong>Barcode/Product</strong>
+                          </label>
+                                                <div class="input-group barcode mb-3">
+                                                    <span class="input-group-text">
+                              <i class="fas fa-barcode"></i>
+                            </span>
+                                                    <input type="text" class="form-control" placeholder="Scan or Add Product" aria-label="text">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label>
+                            <strong>Reference No</strong>
+                          </label>
+                                                <select class="form-select form-control" aria-label="Default select example">
+                            <option selected>Reference-1</option>
+                            <option value="1">Reference-2</option>
+                            <option value="2">Reference-3</option>
+                            <option value="3">Reference-4</option>
+                          </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                            <div class="form-group">
+                                                <label>
+                            <strong>Warehouse</strong>
+                          </label>
+                                                <div class="input-form">
+                                                    <select class="form-select form-control" id="pos-manageInputfield1" aria-label="Default select example">
+                              <option selected>Ware House-1</option>
+                              <option value="1">Ware House-2</option>
+                              <option value="2">Ware House-3</option>
+                              <option value="3">Ware House-4</option>
+                            </select>
+                                                    <i class="fa fa-plus-circle" id="pos-manage-plusIco"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="pos-manage-table">
+                                    <div class="table-wrap">
+                                        <table class="table" style="overflow-x: scroll;">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Reference</th>
+                                                    <th>Item Name</th>
+                                                    <th>Price</th>
+                                                    <th>Quantity</th>
+                                                    <th>Location</th>
+                                                    <th>Customer</th>
+                                                    <th>Tax</th>
+                                                    <th>Biller</th>
+                                                    <th>Sub Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>12-12-2012</td>
+                                                    <td>P-0123</td>
+                                                    <td>Laptop</td>
+                                                    <td>40000.00</td>
+                                                    <td>
+                                                        <ul class="pagination justify-content-end">
+                                                            <li class="page-item">
+                                                                <button class="page-link" id="pagination-left-icon" onclick="decreaseNumber('textbox', 'itemval1')">
+                                    <i class="fas fa-minus" aria-hidden="true"></i>
+                                  </button>
+                                                            </li>
+                                                            <li class="page-item ">
+                                                                <input style="width: 60px; text-align: center;" class="page-link" type="text" name="page-link" value="1" id="textbox">
+                                                            </li>
+                                                            <li class="page-item">
+                                                                <button class="page-link" id="pagination-right-icon" onclick="increaseNumber('textbox', 'itemval1')">
+                                    <i class="fas fa-plus" aria-hidden="true"></i>
+                                  </button>
+                                                            </li>
+                                                        </ul>
+                                                    </td>
+                                                    <td>eShop</td>
+                                                    <td>M-0123</td>
+                                                    <td>
+                                                        <select class="form-select pos-manage-tax">
+                                <option value="1">10%</option>
+                                <option value="2">20%</option>
+                                <option value="3">30%</option>
+                                <option value="4">Custom</option>
+                              </select>
+                                                    </td>
+                                                    <td>Staff-1</td>
+                                                    <td>210.00</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="pos-payment-method">
+                                    <form>
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-6 col-md-12 ">
+                                                <div class="payment-method">
+                                                    <div class="form-group">
+                                                        <label for="paymentMethod">
+                                <strong>Payment Method</strong>
+                              </label>
+                                                        <select class="form-select form-control" id="paymentMethod" aria-label="Default select example">
+                                <option value="1">Cash</option>
+                                <option value="2">Bkash</option>
+                                <option value="3">Nagod</option>
+                                <option value="4">DBBl</option>
+                                <option value="5">Bank</option>
+                              </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="paymentTextarea">
+                                <strong>Note</strong>
+                              </label>
+                                                        <textarea class="form-control" id="paymentTextarea" cols="30" rows="5"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-12 ">
+                                                <div class="payment-amount">
+                                                    <div class="form-group payment-method-amount">
+                                                        <label for="payentVat">
+                                <strong>Discount</strong>
+                              </label>
+                                                        <select class="form-select form-control" id="payentVat" aria-label="Default select example">
+                                <option selected="">10%</option>
+                                <option value="1">10%</option>
+                                <option value="2">30%</option>
+                                <option value="3">40%</option>
+                              </select>
+                                                    </div>
+                                                    <div class="form-group payment-method-amount">
+                                                        <label for="payentVat">
+                                <strong>Vat</strong>
+                              </label>
+                                                        <select class="form-select form-control" id="payentVat1" aria-label="Default select example">
+                                <option selected="">10%</option>
+                                <option value="1">10%</option>
+                                <option value="2">30%</option>
+                                <option value="3">40%</option>
+                              </select>
+                                                    </div>
+                                                    <div class="form-group payment-method-amount">
+                                                        <label for="totalAmount">
+                                <strong>Total Amount</strong>
+                              </label>
+                                                        <input type="text" id="totalAmount" class="form-control" placeholder="40500.00">
+                                                    </div>
+                                                    <div class="form-group payment-method-amount">
+                                                        <label for="previousDue">
+                                <strong>Previous Due</strong>
+                              </label>
+                                                        <input type="text" id="previousDue" class="form-control" placeholder="40500.00">
+                                                    </div>
+                                                    <div class="form-group payment-method-amount">
+                                                        <label for="receiveAmount">
+                                <strong>Receive Amount</strong>
+                              </label>
+                                                        <input type="text" class="form-control" id="receiveAmount" placeholder="40500.00">
+                                                    </div>
+                                                    <div class="form-group payment-method-amount">
+                                                        <label for="returnAmount">
+                                <strong>Return Amount</strong>
+                              </label>
+                                                        <input type="text" class="form-control" id="returnAmount" placeholder="40500.00">
+                                                    </div>
+                                                    <div class="form-group payment-method-amount">
+                                                        <input type="submit" class="submitBtn" value="Submit Sale">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5">
+                            <div class="pos-manage-right pos-manage-border">
+                                <div class="row no-gutters">
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                        <div class="pos-manage filtering-padding">
+                                            <select class="form-select" id="pos-manageSelectbtn" aria-label="Default select example">
+                          <option value="1">Category</option>
+                          <option value="2">Category 1</option>
+                          <option value="3">Category 2</option>
+                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                        <div class="pos-manage filtering-padding">
+                                            <select class="form-select" id="pos-manageSelectbtn1" aria-label="Default select example">
+                          <option value="1">Brand</option>
+                          <option value="2">Brand 1</option>
+                          <option value="3">Brand 2</option>
+                        </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                        <div class="pos-manage" id="pos-manage-srch">
+                                            <input type="search" placeholder="Search...">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters">
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                        <div class="single-pos-item text-center" id="single-pos-item">
+                                            <div class="pos-manage-image">
+                                                <img src="assets/img/fr.png" alt="">
+                                                <span>Gents T-shirt</span>
+                                            </div>
+                                            <div class="pos-manage-content">
+                                                <h6>Winter Collection</h6>
+                                                <span>10.00 $</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                        <div class="single-pos-item text-center" id="single-pos-item1">
+                                            <div class="pos-manage-image">
+                                                <img src="assets/img/fr.png" alt="">
+                                                <span>Gents T-shirt</span>
+                                            </div>
+                                            <div class="pos-manage-content">
+                                                <h6>Winter Collection</h6>
+                                                <span>10.00 $</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                        <div class="single-pos-item text-center" id="single-pos-item2">
+                                            <div class="pos-manage-image">
+                                                <img src="assets/img/fr.png" alt="">
+                                                <span>Gents T-shirt</span>
+                                            </div>
+                                            <div class="pos-manage-content">
+                                                <h6>Winter Collection</h6>
+                                                <span>10.00 $</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                        <div class="single-pos-item text-center" id="single-pos-item3">
+                                            <div class="pos-manage-image">
+                                                <img src="assets/img/fr.png" alt="">
+                                                <span>Gents T-shirt</span>
+                                            </div>
+                                            <div class="pos-manage-content">
+                                                <h6>Winter Collection</h6>
+                                                <span>10.00 $</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                        <div class="single-pos-item text-center" id="single-pos-item4">
+                                            <div class="pos-manage-image">
+                                                <img src="assets/img/fr.png" alt="">
+                                                <span>Gents T-shirt</span>
+                                            </div>
+                                            <div class="pos-manage-content">
+                                                <h6>Winter Collection</h6>
+                                                <span>10.00 $</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-4 col-6">
+                                        <div class="single-pos-item text-center" id="single-pos-item5">
+                                            <div class="pos-manage-image">
+                                                <img src="assets/img/fr.png" alt="">
+                                                <span>Gents T-shirt</span>
+                                            </div>
+                                            <div class="pos-manage-content">
+                                                <h6>Winter Collection</h6>
+                                                <span>10.00 $</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Content -->
+    </div>
+    <!-- /Page Wrapper -->
+    <!-- /Main Wrapper -->
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap Core JS -->
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- font awesome -->
+    <script src="assets/js/kit.fontawesome.js"></script>
+    <!-- Slimscroll JS -->
+    <script src="assets/js/jquery.slimscroll.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/app.js"></script>
+    <!-- Quantity Scripts -->
+    <script src="assets/js/quantity-2.js"></script>
+    <script src="assets/js/quantity-3.js"></script>
+</body>
+
+</html>
